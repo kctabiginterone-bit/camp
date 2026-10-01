@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>CampusCare | Login</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="auth">
+        <div class="login-box">
+            <div class="logo">+</div>
+            <h1>CampusCare</h1>
+            <p>Campus Clinic Appointment Management System</p>
+
+            <section>
+                <h2>Welcome back</h2>
+                <span>Sign in to manage your clinic appointments.</span>
+
+                <form id="login">
+                    <label>Student ID</label>
+                    <input id="sid" required placeholder="e.g. 2026-00123">
+
+                    <label>Password</label>
+                    <input type="password" required placeholder="Enter your password">
+
+                    <button class="primary">Sign In</button>
+                </form>
+
+                <small>Demo: any Student ID and password will work.</small>
+            </section>
+        </div>
+
+        <script>
+            login.onsubmit = e => {
+                e.preventDefault();
+                localStorage.setItem("sid", sid.value);
+                location = "dashboard.html";
+            }
+        </script>
+    </body>
+</html>

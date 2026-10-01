@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>CampusCare | Profile</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="app">
+            <aside>
+                <div class="brand">
+                    <div class="logo">+</div>
+                    <b>CampusCare</b>
+                </div>
+                <nav>
+                    <a href="dashboard.html">⌂ Dashboard</a>
+                    <a href="appointments.html">▣ Appointments</a>
+                    <a href="profile.html">👤 My Profile</a>
+                </nav>
+                <div class="help">
+                    Need help?<small>Contact the campus clinic.</small>
+                </div>
+                <button id="logout">↪ Sign Out</button>
+            </aside>
+
+            <main>
+                <header>
+                    <button id="menu">☰</button>
+                    <div>🔔　<span id="topName">Student</span></div>
+                </header>
+
+                <div class="content">
+                    <div class="head">
+                        <div>
+                            <h1>My Profile</h1>
+                            <p>View and update your student information.</p>
+                        </div>
+                        <button class="btn primary" id="save">Save Changes</button>
+                    </div>
+
+                    <div class="cols">
+                        <section class="card">
+                            <h2>Personal Information</h2>
+                            <form class="profile">
+                                <label>Full Name</label>
+                                <input id="full" value="Juan Dela Cruz">
+
+                                <label>Student ID</label>
+                                <input id="pid" readonly>
+
+                                <label>Email Address</label>
+                                <input id="email" value="juan.delacruz@school.edu">
+
+                                <label>Contact Number</label>
+                                <input id="phone" value="0912 345 6789">
+
+                                <label>Program / Course</label>
+                                <input id="course" value="Bachelor of Science in Information Technology">
+
+                                <label>Year Level</label>
+                                <select id="year">
+                                    <option>1st Year</option>
+                                    <option>2nd Year</option>
+                                    <option selected>3rd Year</option>
+                                    <option>4th Year</option>
+                                </select>
+                            </form>
+                        </section>
+
+                        <section class="card">
+                            <div class="profile-avatar">JD</div>
+                            <h2 id="display">Juan Dela Cruz</h2>
+                            <p id="displayId" class="muted"></p>
+                            <hr>
+
+                            <div class="row">
+                                <span>Account Status</span>
+                                <b class="green">Active</b>
+                            </div>
+
+                            <div class="row">
+                                <span>Member Since</span>
+                                <b>2026</b>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div id="toast"></div>
+        <script src="js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>CampusCare | Appointments</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="app">
+            <aside>
+                <div class="brand">
+                    <div class="logo">+</div>
+                    <b>CampusCare</b>
+                </div>
+                <nav>
+                    <a href="dashboard.html">⌂ Dashboard</a>
+                    <a href="appointments.html">▣ Appointments</a>
+                    <a href="profile.html">👤 My Profile</a>
+                </nav>
+                <div class="help">
+                    Need help?<small>Contact the campus clinic.</small>
+                </div>
+                <button id="logout">↪ Sign Out</button>
+            </aside>
+
+            <main>
+                <header>
+                    <button id="menu">☰</button>
+                    <div>🔔　<span id="topName">Student</span></div>
+                </header>
+
+                <div class="content">
+                    <div class="head">
+                        <div>
+                            <h1>Appointments</h1>
+                            <p>Schedule and manage your campus clinic visits.</p>
+                        </div>
+                        <button class="btn primary" id="open">+ Book Appointment</button>
+                    </div>
+
+                    <section class="card" id="formbox" style="display:none">
+                        <div class="between">
+                            <h2>Book an Appointment</h2>
+                            <button id="close">×</button>
+                        </div>
+
+                        <form id="book" class="form">
+                            <div>
+                                <label>Clinic Service</label>
+                                <select id="svc" required>
+                                    <option value="">Select a service</option>
+                                    <option>General Consultation</option>
+                                    <option>Medical Certificate</option>
+                                    <option>First Aid</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label>Date</label>
+                                <input id="dt" type="date" required>
+                            </div>
+
+                            <div>
+                                <label>Time</label>
+                                <select id="tm" required>
+                                    <option value="">Select a time</option>
+                                    <option>8:00 AM</option>
+                                    <option>9:00 AM</option>
+                                    <option>10:00 AM</option>
+                                    <option>1:00 PM</option>
+                                    <option>2:00 PM</option>
+                                    <option>3:00 PM</option>
+                                    <option>4:00 PM</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label>Notes</label>
+                                <input id="note" placeholder="Optional">
+                            </div>
+
+                            <button class="primary">Confirm Appointment</button>
+                        </form>
+                    </section>
+
+                    <section class="card">
+                        <div class="between">
+                            <h2>My Appointments</h2>
+                            <span class="pill" id="total">0</span>
+                        </div>
+                        <div id="list"></div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <div id="toast"></div>
+        <script src="js/app.js"></script>
+    </body>
+</html>

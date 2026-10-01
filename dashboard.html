@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>CampusCare | Dashboard</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="app">
+            <aside>
+                <div class="brand">
+                    <div class="logo">+</div>
+                    <b>CampusCare</b>
+                </div>
+                <nav>
+                    <a href="dashboard.html">⌂ Dashboard</a>
+                    <a href="appointments.html">▣ Appointments</a>
+                    <a href="profile.html">👤 My Profile</a>
+                </nav>
+                <div class="help">
+                    Need help?<small>Contact the campus clinic.</small>
+                </div>
+                <button id="logout">↪ Sign Out</button>
+            </aside>
+
+            <main>
+                <header>
+                    <button id="menu">☰</button>
+                    <div>🔔　<span id="topName">Student</span></div>
+                </header>
+
+                <div class="content">
+                    <div class="head">
+                        <div>
+                            <h1>Good morning, <span id="name">Student</span>!</h1>
+                            <p>Here’s your clinic overview for today.</p>
+                        </div>
+                        <a class="btn primary" href="appointments.html#book">+ Book Appointment</a>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <small>Upcoming Appointment</small>
+                            <b id="date">None</b>
+                            <span id="service">No appointment scheduled</span>
+                        </div>
+
+                        <div class="stat">
+                            <small>Total Appointments</small>
+                            <b id="count">0</b>
+                            <span>Your appointment history</span>
+                        </div>
+
+                        <div class="stat">
+                            <small>Clinic Status</small>
+                            <b class="green">Open</b>
+                            <span>Monday–Friday · 8:00 AM–5:00 PM</span>
+                        </div>
+                    </div>
+
+                    <div class="cols">
+                        <section class="card">
+                            <h2>Next Appointment</h2>
+                            <div id="next" class="empty">
+                                No upcoming appointment.<br>
+                                <a href="appointments.html#book">Book an appointment</a>
+                            </div>
+                        </section>
+
+                        <section class="card">
+                            <h2>Quick Actions</h2>
+                            <div class="quick">
+                                <a href="appointments.html#book">📅 <b>Book Appointment</b><small>Choose a service and time</small></a>
+                                <a href="appointments.html">▣ <b>My Appointments</b><small>View or cancel visits</small></a>
+                                <a href="profile.html">👤 <b>My Profile</b><small>Update your information</small></a>
+                            </div>
+                        </section>
+                    </div>
+
+                    <section class="card">
+                        <h2>Today's Clinic Information</h2>
+                        <div class="info">
+                            <b>Clinic Hours</b>
+                            <span>8:00 AM – 5:00 PM</span>
+                            <b>Available Services</b>
+                            <span>General Consultation · Medical Certificate · First Aid</span>
+                            <b>Location</b>
+                            <span>Campus Clinic</span>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+
+        <div id="toast"></div>
+        <script src="js/app.js"></script>
+    </body>
+</html>
